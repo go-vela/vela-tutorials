@@ -1,0 +1,27 @@
+# name of the action
+name: python
+
+# trigger on pull_request or push events
+on:
+  pull_request:
+  push:
+    branches-ignore:
+     - master
+
+# pipeline to execute
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    container:
+      image: python:latest
+    steps:
+    - name: clone
+      uses: actions/checkout@v1
+
+    - name: docker
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: target/vela-sample:python
+        workdir: plugins/python
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}

@@ -1,0 +1,27 @@
+# name of the action
+name: node.js
+
+# trigger on pull_request or push events
+on:
+  pull_request:
+  push:
+    branches-ignore:
+     - master
+
+# pipeline to execute
+jobs:
+  publish:
+    runs-on: ubuntu-latest
+    container:
+      image: node:latest
+    steps:
+    - name: clone
+      uses: actions/checkout@v1
+
+    - name: docker
+      uses: elgohr/Publish-Docker-Github-Action@master
+      with:
+        name: target/vela-sample:node
+        workdir: plugins/node.js
+        username: ${{ secrets.DOCKER_USERNAME }}
+        password: ${{ secrets.DOCKER_PASSWORD }}
