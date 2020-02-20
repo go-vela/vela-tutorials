@@ -2,7 +2,7 @@
 
 Learn how to write a Vela plugin with Go!
 
-**NOTE: We recommend you review [Docker's best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) before attempting to create your own plugin.**
+**NOTE: We recommend reviewing [Docker's best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) before attempting to create a custom plugin.**
 
 **NOTE: We recommend that all plugins be placed inside a [scratch image](https://hub.docker.com/_/scratch).**
 
@@ -24,25 +24,25 @@ A sample of this script is provided [here](main.go).
 
 ## Executable
 
-Now that we have the program to accomplish our plugin's task, we need to compile the code to produce an executable binary for our target platform:
+Now that we have the program to accomplish our plugin's task, we need to compile the code to produce an executable binary for the target platform:
 
 ```sh
 GOOS=linux GOARCH=amd64 CGO_ENABLED=0 go build -o vela-sample
 ```
 
-**NOTE: Please ensure you compile your program for the right target platform. If you don't, your plugin may fail to properly run and produce unclear error messages.**
+**NOTE: Please ensure the program is compiled for the right target platform. If it's not, the plugin may fail to properly run and produce unclear error messages.**
 
 ## Image
 
 Once we have the executable needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image.
 
-This image should contain our binary and be setup to run that binary when the plugin is executed.
+This image should contain the binary and be setup to run that binary when the plugin is executed.
 
 A sample of this file is provided [here](Dockerfile).
 
 ## Publishing
 
-In order to run our plugin in a pipeline, we'll need to make sure we build and publish it to a Docker registry:
+In order to run the plugin in a pipeline, we'll need to make sure we build and publish it to a Docker registry:
 
 ```sh
 # build the image
@@ -56,7 +56,7 @@ docker push target/vela-sample:go
 
 ## Troubleshooting
 
-To verify that your plugin performs the desired task, you can execute it locally via the command line:
+To verify that the plugin performs the desired task, it can be executed locally via the command line:
 
 ```sh
 docker run --rm \
@@ -68,7 +68,7 @@ docker run --rm \
 
 ## Usage
 
-After publishing your image to a Docker registry, you can then reference it in a pipeline:
+After publishing the image to a Docker registry, it can be referenced in a pipeline:
 
 ```yaml
 version: "1"
