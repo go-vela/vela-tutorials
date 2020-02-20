@@ -26,8 +26,8 @@ jobs:
       run: |
         go build \
           -ldflags '-extldflags "-static"' \
-          -o go/vela-sample \
-          go/main.go
+          -o plugins/go/vela-sample \
+          plugins/go/main.go
 
     - name: docker
       uses: elgohr/Publish-Docker-Github-Action@master
