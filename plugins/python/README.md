@@ -2,7 +2,7 @@
 
 Learn how to write a Vela plugin with Python!
 
-**NOTE: We recommend you review [Docker's best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) before attempting to create your own plugin.**
+**NOTE: We recommend reviewing [Docker's best practices](https://docs.docker.com/develop/develop-images/dockerfile_best-practices/) before attempting to create a custom plugin.**
 
 **NOTE: We recommend that all plugins be placed inside a [scratch image](https://hub.docker.com/_/scratch).**
 
@@ -26,13 +26,13 @@ A sample of this script is provided [here](vela-sample.py).
 
 Once we have the script needed to accomplish our plugin's task, we need to create a Dockerfile to produce an image.
 
-This image should contain our script and be setup to run that script when the plugin is executed.
+This image should contain the script and be setup to run that script when the plugin is executed.
 
 A sample of this file is provided [here](Dockerfile).
 
 ## Publishing
 
-In order to run our plugin in a pipeline, we'll need to make sure we build and publish it to a Docker registry:
+In order to run the plugin in a pipeline, we'll need to make sure we build and publish it to a Docker registry:
 
 ```sh
 # build the image
@@ -46,7 +46,7 @@ docker push target/vela-sample:python
 
 ## Troubleshooting
 
-To verify that your plugin performs the desired task, you can execute it locally via the command line:
+To verify that the plugin performs the desired task, it can be executed locally via the command line:
 
 ```sh
 docker run --rm \
@@ -58,7 +58,7 @@ docker run --rm \
 
 ## Usage
 
-After publishing your image to a Docker registry, you can then reference it in a pipeline:
+After publishing the image to a Docker registry, it can be referenced in a pipeline:
 
 ```yaml
 version: "1"
