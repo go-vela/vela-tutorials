@@ -66,7 +66,7 @@ version: "1"
 steps:
   - name: sample python plugin
     image: target/vela-sample:python
-    pull: true
+    pull: always
     parameters:
       url: http://vela.localhost.com
       method: POST

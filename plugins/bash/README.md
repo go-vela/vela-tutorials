@@ -68,7 +68,7 @@ version: "1"
 steps:
   - name: sample bash plugin
     image: target/vela-sample:bash
-    pull: true
+    pull: always
     parameters:
       url: http://vela.localhost.com
       method: POST
