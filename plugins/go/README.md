@@ -76,7 +76,7 @@ version: "1"
 steps:
   - name: sample go plugin
     image: target/vela-sample:go
-    pull: true
+    pull: always
     parameters:
       url: http://vela.localhost.com
       method: POST

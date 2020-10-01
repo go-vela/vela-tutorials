@@ -66,7 +66,7 @@ version: "1"
 steps:
   - name: sample node plugin
     image: target/vela-sample:node
-    pull: true
+    pull: always
     parameters:
       url: http://vela.localhost.com
       method: POST

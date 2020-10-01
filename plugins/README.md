@@ -19,7 +19,7 @@ version: "1"
 steps:
   - name: plugin
     image: target/vela-docker:v0.1.0
-    pull: true
+    pull: always
     parameters:
       registry: index.docker.io
       repo: index.docker.io/octocat/hello-world
@@ -43,7 +43,7 @@ version: "1"
 steps:
   - name: plugin
     image: target/vela-docker:v0.1.0
-    pull: true
+    pull: always
 +   parameters:
 +     registry: index.docker.io
 +     repo: index.docker.io/octocat/hello-world
