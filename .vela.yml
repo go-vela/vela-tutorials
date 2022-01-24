@@ -1,0 +1,7 @@
+version: "1"
+
+steps:
+  - name: environment
+    image: alpine:latest
+    commands:
+      - printenv | sort
