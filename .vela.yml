@@ -1,7 +1,8 @@
 version: "1"
 
 steps:
-  - name: environment
+  - name: sleep
     image: alpine:latest
     commands:
-      - printenv | sort
+      - sleep 60
+      - echo "60 seconds"
