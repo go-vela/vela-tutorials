@@ -1,7 +1,7 @@
 version: "1"
 
 steps:
-  - name: environment
-    image: alpine:${FOO}
+  - name: invalid
+    image: alpine:latest
     commands:
-      - printenv | sort
+      - echo foo:
