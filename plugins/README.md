@@ -2,8 +2,6 @@
 
 ## Overview
 
-From the [official plugin documentation](https://go-vela.github.io/docs/plugins/overview/):
-
 > A plugin is a Docker container that is designed to perform a set of pre-defined actions.
 >
 > These actions can be for any number of general tasks, including:
@@ -18,7 +16,7 @@ version: "1"
 
 steps:
   - name: plugin
-    image: target/vela-docker:v0.1.0
+    image: target/vela-docker:latest
     pull: always
     parameters:
       registry: index.docker.io
@@ -42,7 +40,7 @@ version: "1"
 
 steps:
   - name: plugin
-    image: target/vela-docker:v0.1.0
+    image: target/vela-docker:latest
     pull: always
 +   parameters:
 +     registry: index.docker.io
@@ -58,10 +56,10 @@ From the above example, the following environment variables would be added to th
 
 We have plugin guides for several different languages:
 
-* [Bash](https://go-vela.github.io/docs/plugins/pipeline/tutorials/bash/)
-* [Go](https://go-vela.github.io/docs/plugins/pipeline/tutorials/go/)
-* [Node.js](https://go-vela.github.io/docs/plugins/pipeline/tutorials/node/)
-* [Python](https://go-vela.github.io/docs/plugins/pipeline/tutorials/python/)
-* [Ruby](https://go-vela.github.io/docs/plugins/pipeline/tutorials/ruby/)
+* [Bash](https://go-vela.github.io/docs/plugins/tutorials/bash/)
+* [Go](https://go-vela.github.io/docs/plugins/tutorials/go/)
+* [Node.js](https://go-vela.github.io/docs/plugins/tutorials/node/)
+* [Python](https://go-vela.github.io/docs/plugins/tutorials/python/)
+* [Ruby](https://go-vela.github.io/docs/plugins/tutorials/ruby/)
 
 **NOTE: An example of these tutorials also exist in this repository.**
