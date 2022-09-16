@@ -6,20 +6,24 @@ on:
   pull_request:
   push:
     branches-ignore:
-     - master
+     - main
 
 # pipeline to execute
 jobs:
   publish:
     runs-on: ubuntu-latest
-    container:
-      image: node:latest
+    
     steps:
     - name: clone
       uses: actions/checkout@v3
 
+    - name: install node
+      uses: actions/setup-node@v3
+      with:
+        node-version: 16
+
     - name: docker
-      uses: elgohr/Publish-Docker-Github-Action@master
+      uses: elgohr/Publish-Docker-Github-Action@v4
       with:
         name: target/vela-sample:node
         workdir: plugins/node.js
