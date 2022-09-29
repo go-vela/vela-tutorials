@@ -23,7 +23,7 @@ jobs:
         ruby-version: '3.0'
 
     - name: docker
-      uses: elgohr/Publish-Docker-Github-Action@v4
+      uses: elgohr/Publish-Docker-Github-Action@20190331160914
       with:
         name: target/vela-sample:ruby
         workdir: plugins/ruby

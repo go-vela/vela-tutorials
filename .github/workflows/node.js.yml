@@ -23,7 +23,7 @@ jobs:
         node-version: 16
 
     - name: docker
-      uses: elgohr/Publish-Docker-Github-Action@v4
+      uses: elgohr/Publish-Docker-Github-Action@20190331160914
       with:
         name: target/vela-sample:node
         workdir: plugins/node.js
