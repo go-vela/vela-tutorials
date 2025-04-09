@@ -18,7 +18,7 @@ jobs:
       uses: actions/checkout@f43a0e5ff2bd294095638e18286ca9a3d1956744 # v3
 
     - name: docker
-      uses: elgohr/Publish-Docker-Github-Action@742a180fa47f3adfb5115902ae4955acc6ad769b # v4
+      uses: elgohr/Publish-Docker-Github-Action@eb53b3ec07136a6ebaed78d8135806da64f7c7e2 # v5
       with:
         name: target/vela-sample:bash
         workdir: plugins/bash
