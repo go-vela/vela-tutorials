@@ -34,7 +34,7 @@ jobs:
           plugins/go/main.go
 
     - name: docker
-      uses: elgohr/Publish-Docker-Github-Action@742a180fa47f3adfb5115902ae4955acc6ad769b # v4
+      uses: elgohr/Publish-Docker-Github-Action@eb53b3ec07136a6ebaed78d8135806da64f7c7e2 # v5
       with:
         name: target/vela-sample:go
         workdir: plugins/go
