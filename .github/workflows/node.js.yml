@@ -20,7 +20,7 @@ jobs:
     - name: install node
       uses: actions/setup-node@1a4442cacd436585916779262731d5b162bc6ec7 # v3
       with:
-        node-version: 16
+        node-version: 24
 
     - name: docker
       uses: elgohr/Publish-Docker-Github-Action@742a180fa47f3adfb5115902ae4955acc6ad769b # v4
