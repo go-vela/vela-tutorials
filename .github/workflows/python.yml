@@ -23,7 +23,7 @@ jobs:
         python-version: '3.13'
 
     - name: docker
-      uses: elgohr/Publish-Docker-Github-Action@742a180fa47f3adfb5115902ae4955acc6ad769b # v4
+      uses: elgohr/Publish-Docker-Github-Action@1c2f28ccd9476e8a936ac9a1f287405504c93304 # v5
       with:
         name: target/vela-sample:python
         workdir: plugins/python
