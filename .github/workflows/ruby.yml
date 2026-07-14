@@ -20,7 +20,7 @@ jobs:
     - name: setup ruby
       uses: ruby/setup-ruby@v1
       with:
-        ruby-version: '3.0'
+        ruby-version: '4.0.6'
 
     - name: docker
       uses: elgohr/Publish-Docker-Github-Action@742a180fa47f3adfb5115902ae4955acc6ad769b # v4
