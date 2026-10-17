@@ -1,4 +1,4 @@
-FROM node:alpine@sha256:86703151a18fcd06258e013073508c4afea8e19cd7ed451554221dd00aea83fc
+FROM node:alpine@sha256:6f08a523443ddedf52941874c203475b0ad503e859ad70cb26ab8be9a517dbd5
 
 RUN apk add --update --no-cache ca-certificates
 
