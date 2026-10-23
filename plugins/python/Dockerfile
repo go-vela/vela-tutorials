@@ -1,4 +1,4 @@
-FROM python:alpine@sha256:18159b2be11db91f84b8f8f655cd860f805dbd9e49a583ddaac8ab39bf4fe1a7
+FROM python:alpine@sha256:d44b1254cb92329418d164b22b20d86bbd3869d48e80e09e476531a409a728bb
 
 RUN apk add --update --no-cache ca-certificates
 
