@@ -1,4 +1,4 @@
-FROM ruby:alpine@sha256:cb6a5cb7303314946b75fa64c96d8116f838b8495ffa161610bd6aaaf9a70121
+FROM ruby:alpine@sha256:f172a0265b6a887e0342f822c26fa2ee1c2135c831033ee9ae58f41976d1f6b4
 
 RUN apk add --update --no-cache ca-certificates
 
